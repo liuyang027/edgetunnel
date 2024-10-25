@@ -383,6 +383,7 @@ async function handleTCPOutBound(remoteSocket, addressType, addressRemote, portR
 	}
 
 	// 首次尝试连接远程服务器
+	log(`first connect to ${addressRemote}:${portRemote}`);
 	let tcpSocket = await connectAndWrite(addressRemote, portRemote);
 
 	// 当远程 Socket 就绪时，将其传递给 WebSocket
